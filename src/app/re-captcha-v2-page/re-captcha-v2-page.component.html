@@ -1,0 +1,23 @@
+<p>re-captcha-v2-page works!</p>
+
+<div class="m-10">
+  <form [formGroup]="reCaptchaV2Form">
+    <sc-re-captcha-v2 [siteKey]="siteKey" formControlName="captcha" />
+  </form>
+</div>
+
+<br />
+<br />
+<br />
+
+{{ reCaptchaV2Form.value | json }}
+
+<br />
+<br />
+<br />
+
+<sc-re-captcha-v2
+  [siteKey]="siteKey"
+  (valueChange)="doSomething($event)"
+  theme="dark"
+/>
