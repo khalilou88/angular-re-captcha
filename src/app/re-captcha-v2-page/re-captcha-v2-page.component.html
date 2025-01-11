@@ -2,7 +2,7 @@
 
 <div class="m-10">
   <form [formGroup]="reCaptchaV2Form">
-    <sc-re-captcha-v2 [siteKey]="siteKey" formControlName="captcha" />
+    <div sc-re-captcha-v2 [siteKey]="siteKey" formControlName="captcha"></div>
   </form>
 </div>
 
@@ -16,8 +16,9 @@
 <br />
 <br />
 
-<sc-re-captcha-v2
+<div
+  sc-re-captcha-v2
   [siteKey]="siteKey"
   (valueChange)="doSomething($event)"
   theme="dark"
-/>
+></div>

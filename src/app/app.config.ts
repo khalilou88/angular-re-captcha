@@ -7,8 +7,8 @@ import {
   withEventReplay,
 } from '@angular/platform-browser';
 import {
-  SC_RE_CAPTCHA_V2_LANGUAGE_CODE,
-  SC_RE_CAPTCHA_V3_SITE_KEY,
+  SC_RE_CAPTCHA_LANGUAGE_CODE,
+  SC_RE_CAPTCHA_SITE_KEY,
 } from '@semantic-components/re-captcha';
 
 export const appConfig: ApplicationConfig = {
@@ -16,9 +16,9 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
-    { provide: SC_RE_CAPTCHA_V2_LANGUAGE_CODE, useValue: 'en' },
+    { provide: SC_RE_CAPTCHA_LANGUAGE_CODE, useValue: 'en' },
     {
-      provide: SC_RE_CAPTCHA_V3_SITE_KEY,
+      provide: SC_RE_CAPTCHA_SITE_KEY,
       useValue: '6LczIrAqAAAAANk0sH07W5kW6hPNwfWAJbnaoEat',
     },
   ],
